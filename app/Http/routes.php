@@ -14,4 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/category', array('as' => 'category.get', 'uses' => 'CategoryController@get'));
+Route::get('/category/{id?}', array('as' => 'category.get', 'uses' => 'CategoryController@get'));
+
+Route::post('/category/', array('as' => 'category.post', 'uses' => 'CategoryController@create'));
+Route::post('/article/', array('as' => 'article.post', 'uses' => 'ArticleController@create'));
