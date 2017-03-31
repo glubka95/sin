@@ -1,3 +1,7 @@
+
+@extends('welcome')
+
+@section('content')
 <ul>
 @foreach($categories as $category)
 
@@ -12,3 +16,4 @@
     <button type="submit">Add category</button>
     <button type="reset">Cancel</button>
 </form>
+@stop
