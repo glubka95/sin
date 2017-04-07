@@ -10,8 +10,8 @@
 </ul>
 
 <form method="POST">
-    <span>Category name </span>
-    <input type="text" name="name" placeholder="">
+    <label>Category name </label>
+    <input type="text" name="name" placeholder="" class="form-control">
     <input type="hidden" name="token" value="{{csrf_token()}}">
     <button type="submit">Add category</button>
     <button type="reset">Cancel</button>

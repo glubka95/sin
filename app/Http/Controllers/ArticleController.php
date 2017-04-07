@@ -29,7 +29,6 @@ class ArticleController extends Controller
 
     public function create(){
         $data = request()->all();
-        return var_dump($data);
         $title = array_get($data, "title");
          $content = array_get($data, "content");
           $category_id = array_get($data, "category_id");
@@ -39,9 +38,8 @@ class ArticleController extends Controller
         $article->category()->associate($category);
         $article->title = $title;
         $article->content = $content;
-        
         $article->save();
-        return redirect (route("article.get"));
+        return redirect(route("category.get", ["id"=> $category_id]));
         
     }
         
