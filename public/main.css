@@ -36,3 +36,9 @@ body {
 .one {
     list-style: none;
 }
+
+#bgChanger {
+    position: absolute;
+    top: 10px;
+    vight: 10px;
+}

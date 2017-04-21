@@ -11,9 +11,9 @@
 
 <form method="POST">
     <label>Category name </label>
-    <input type="text" name="name" placeholder="" class="form-control">
+    <input type="text" id="name" name="name" placeholder="" class="form-control" onkeyup="validInput()">
     <input type="hidden" name="token" value="{{csrf_token()}}">
-    <button type="submit">Add category</button>
+    <button type="submit" disabled>Add category</button>
     <button type="reset">Cancel</button>
 </form>
 @stop
